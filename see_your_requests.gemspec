@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.authors = ["Casey Davidson"]
   s.files = Dir['lib/**/*.rb']
   s.executables << 'see_your_requests'
-  s.license = 'MIT;
+  s.license = 'MIT'
 
   s.add_runtime_dependency 'sinatra', '~> 1.4'
 end

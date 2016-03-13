@@ -9,5 +9,3 @@ class SeeYourRequests < Sinatra::Base
   end
 
 end
-
-SeeYourRequests.run!

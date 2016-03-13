@@ -7,3 +7,4 @@ rescue LoadError => e
   $:.unshift(path) if File.directory?(path) && !$:.include?(path)
   require 'see_your_requests.rb'
 end
+SeeYourRequests.run!

@@ -6,6 +6,6 @@ Gem::Specification.new do |s|
   s.description = 'A lightweight application that allows you to easily see your requests. Useful for debugging API authorization, among others.'
   s.authors = ["Casey Davidson"]
   s.files = Dir['lib/**/*.rb']
-  s.executables << "see_your_requests"
-  s.license = "MIT"
+  s.executables << 'see_your_requests'
+  s.license = 'MIT;
 end

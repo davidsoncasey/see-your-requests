@@ -1,5 +1,4 @@
 require 'see_your_requests'
-require 'pry'
 require 'rack/test'
 
 ENV['RACK_ENV'] = 'test'

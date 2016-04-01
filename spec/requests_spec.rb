@@ -55,8 +55,8 @@ RSpec.describe SeeYourRequests do
   context 'Printing body' do
     let(:body) { 'Request Body' }
 
-    it 'prints body on post request' do
-      expect { post '/', body }.to output(/Request Body/).to_stdout
+    it 'prints body on a request' do
+      expect { get '/', body }.to output(/Request Body/).to_stdout
     end
   end
 end

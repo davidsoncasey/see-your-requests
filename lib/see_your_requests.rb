@@ -8,6 +8,9 @@ class SeeYourRequests < Sinatra::Base
   route :get, :post, :put, :delete, :head, :options, '/' do
     content_type :text
     puts JSON.pretty_generate(request.env)
+    if request.body.size > 0
+      puts JSON.pretty_generate(request.body.read)
+    end
   end
 
 end

@@ -37,4 +37,18 @@ RSpec.describe SeeYourRequests do
       expect(last_response).to be_ok
     end
   end
+
+  context 'Printing headers' do
+    before do
+      header 'TEST_HEADER', 'test-value'
+    end
+
+    it 'prints header name' do
+      expect { get '/' }.to output(/HTTP_TEST_HEADER/).to_stdout
+    end
+
+    it 'prints header value' do
+      expect { get '/' }.to output(/test-value/).to_stdout
+    end
+  end
 end

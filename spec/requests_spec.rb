@@ -3,6 +3,10 @@ require 'spec_helper'
 RSpec.describe SeeYourRequests do
 
   context 'HTTP methods' do
+    before do
+      $stdout = StringIO.new
+    end
+
     it 'returns 200 status for get request' do
       get '/'
       expect(last_response).to be_ok

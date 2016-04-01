@@ -1,9 +1,9 @@
-require 'sinatra'
+require 'sinatra/base'
 require 'json'
 
 class SeeYourRequests < Sinatra::Base
 
-  get '/console' do
+  get '/' do
     content_type :text
     puts JSON.pretty_generate(request.env)
   end

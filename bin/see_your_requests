@@ -1,4 +1,19 @@
 #!/usr/bin/env ruby
+require 'optparse'
+
+options = {}
+OptionParser.new do |opts|
+  opts.banner = "Usage: see_your_requests [options]"
+  opts.on("-pPORT", "--port=PORT", "Specify port to run on") do |port|
+    options[:port] = port
+  end
+
+  opts.on("-h", "--help", "Prints help") do
+    puts opts
+    exit
+  end
+end.parse!
+
 begin
   require 'see_your_requests.rb'
 rescue LoadError => e
@@ -7,4 +22,6 @@ rescue LoadError => e
   $:.unshift(path) if File.directory?(path) && !$:.include?(path)
   require 'see_your_requests.rb'
 end
-SeeYourRequests.run!
+
+port = options[:port] || 4567
+SeeYourRequests.run!(port: port)

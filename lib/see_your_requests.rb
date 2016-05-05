@@ -1,15 +1,15 @@
 require 'sinatra/base'
 require 'sinatra/multi_route'
-require 'json'
+require 'awesome_print'
 
 class SeeYourRequests < Sinatra::Base
   register Sinatra::MultiRoute
 
   route :get, :post, :put, :delete, :head, :options, '/' do
     content_type :text
-    puts JSON.pretty_generate(request.env)
+    ap request.env.reject { |k, v| k =~ /^rack.*/ }
     if request.body.size > 0
-      puts JSON.pretty_generate(request.body.read)
+      ap request.body.read
     end
   end
 

@@ -13,12 +13,12 @@ RSpec.describe SeeYourRequests do
     end
 
     it 'returns 200 status for post request' do
-      post '/', {}
+      post '/', {test: "value"}
       expect(last_response).to be_ok
     end
 
     it 'returns 200 status for put request' do
-      put '/', {}
+      put '/', {test: "value"}
       expect(last_response).to be_ok
     end
 

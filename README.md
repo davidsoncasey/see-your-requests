@@ -1,4 +1,4 @@
-** See Your Requests
+## See Your Requests
 
 [![Gem Version](https://badge.fury.io/rb/see_your_requests.svg)](https://badge.fury.io/rb/see_your_requests)
 
@@ -7,13 +7,13 @@ as received by a webserver. The inspiration for this application came from a tim
 to set a series of authorization headers for an API, and I wanted to verify that the correct headers
 were being set by the HTTP gem that I was using.
 
-*** Installation
+### Installation
 To install as a ruby gem:
 ```
 $ gem install see_your_requests
 ```
 
-*** Usage
+### Usage
 After installation, simply run in a terminal:
 ```
 see_your_requests

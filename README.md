@@ -5,7 +5,7 @@
 See Your Requests is a lightweight Sinatra application that provides a way to view a request made,
 as received by a webserver. The inspiration for this application came from a time when I was trying
 to set a series of authorization headers for an API, and I wanted to verify that the correct headers
-were being set by the HTTP gem that I was using.
+were being set by the HTTP gem that I was using. This is a similar tool to something like [Request Bin](http://requestb.in/) or Python's [httpbin](https://github.com/Runscope/httpbin) library, but is lightweight and runs locally.
 
 ### Installation
 To install as a ruby gem:
@@ -56,3 +56,4 @@ For example, if you navigate to `127.0.0.1:4567` in Chrome, See Your Requests wi
                      "sinatra.route" => "GET /"
 }
 ```
+If you are debugging API requests, simply change out the API URL for the local URL that See Your Requests is running on.

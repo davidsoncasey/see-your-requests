@@ -7,7 +7,7 @@ class SeeYourRequests < Sinatra::Base
 
   route :get, :post, :put, :delete, :head, :options, '/' do
     content_type :text
-    ap request.env.reject { |k, v| k =~ /^rack.*/ }
+    ap request.env
     if request.body.size > 0
       ap request.body.read
     end

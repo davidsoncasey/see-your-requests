@@ -1,6 +1,7 @@
 ## See Your Requests
 
 [![Gem Version](https://badge.fury.io/rb/see_your_requests.svg)](https://badge.fury.io/rb/see_your_requests)
+[![Build Status](https://travis-ci.org/davidsoncasey/see-your-requests.svg?branch=master)](https://travis-ci.org/davidsoncasey/see-your-requests)
 
 See Your Requests is a lightweight Sinatra application that provides a way to view a request made,
 as received by a webserver. The inspiration for this application came from a time when I was trying

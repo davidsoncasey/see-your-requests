@@ -13,5 +13,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'sinatra-contrib', '~> 1.4'
   s.add_runtime_dependency 'awesome_print', '~> 1.2'
 
+  s.add_development_dependency 'bundler', '~> 1.5'
+  s.add_development_dependency 'rake'
   s.add_development_dependency 'rspec', '~> 3.4'
 end

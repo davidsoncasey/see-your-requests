@@ -1,4 +1,5 @@
 require 'see_your_requests'
+require 'see_your_requests/request_formatter'
 require 'rack/test'
 
 ENV['RACK_ENV'] = 'test'

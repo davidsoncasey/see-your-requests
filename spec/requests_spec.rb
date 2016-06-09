@@ -44,7 +44,7 @@ RSpec.describe SeeYourRequests do
     end
 
     it 'prints header name' do
-      expect { get '/' }.to output(/HTTP_TEST_HEADER/).to_stdout
+      expect { get '/' }.to output(/TEST_HEADER/).to_stdout
     end
 
     it 'prints header value' do

@@ -1,5 +1,4 @@
 require 'awesome_print'
-require 'pry'
 
 class RequestFormatter
   def initialize(request)
@@ -15,6 +14,14 @@ class RequestFormatter
     end
     ap formatted_headers
     formatted_headers.to_s
+  end
+
+  def print_body
+    if @request.body.size > 0
+      ap @request.body.read
+    else
+      ""
+    end
   end
 
   def create_response

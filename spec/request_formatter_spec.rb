@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'pry-byebug'
 
 RSpec.describe RequestFormatter do
   context 'printing headers' do
@@ -19,6 +18,20 @@ RSpec.describe RequestFormatter do
       expect { request_formatter.print_http_headers }.to_not(
         output(/rack\./).to_stdout
       )
+    end
+  end
+
+  context 'printing body' do
+    it 'prints the request body' do
+      test_env = Rack::MockRequest.env_for("test_url", {input: "test value"})
+      request_formatter = RequestFormatter.new(Rack::Request.new(test_env))
+      expect { request_formatter.print_body }.to output(/test value/).to_stdout
+    end
+
+    it 'handles nil body' do
+      test_env = Rack::MockRequest.env_for("test_url", {input: nil})
+      request_formatter = RequestFormatter.new(Rack::Request.new(test_env))
+      expect { request_formatter.print_body }.to output("").to_stdout
     end
   end
 end

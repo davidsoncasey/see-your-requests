@@ -9,9 +9,7 @@ class SeeYourRequests < Sinatra::Base
     content_type :text
     request_formatter = RequestFormatter.new(request)
     request_formatter.print_http_headers
-    if request.body.size > 0
-      ap request.body.read
-    end
+    request_formatter.print_body
   end
 
 end

@@ -34,4 +34,13 @@ RSpec.describe RequestFormatter do
       expect { request_formatter.print_body }.to output("").to_stdout
     end
   end
+
+  context 'printing method' do
+    it 'prints the request method' do
+      test_env = Rack::MockRequest.env_for("test_url", {method: 'POST'})
+      mock_request = Rack::Request.new(test_env)
+      request_formatter = RequestFormatter.new(mock_request)
+      expect { request_formatter.print_method }.to output(/POST/).to_stdout
+    end
+  end
 end

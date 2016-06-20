@@ -5,6 +5,11 @@ class RequestFormatter
     @request = request
   end
 
+  def print_method
+    method = @request.env["REQUEST_METHOD"]
+    puts "Request method: #{ method }"
+  end
+
   def print_http_headers
     formatted_headers = {}
     http_headers = @request.env.select { |k, v| k =~ /^HTTP_.*/ }

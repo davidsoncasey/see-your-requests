@@ -21,8 +21,4 @@ class RequestFormatter
       ap @request.body.read
     end
   end
-
-  def create_response
-    Rack::Response.new
-  end
 end

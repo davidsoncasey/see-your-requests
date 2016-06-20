@@ -5,6 +5,13 @@ class RequestFormatter
     @request = request
   end
 
+  def print_request
+    puts "\nRequest received at #{ Time.now }"
+    print_method
+    print_http_headers
+    print_body
+  end
+
   def print_method
     method = @request.env["REQUEST_METHOD"]
     puts "Request method: #{ method }"

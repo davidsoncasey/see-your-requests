@@ -8,8 +8,7 @@ class SeeYourRequests < Sinatra::Base
   route :get, :post, :put, :delete, :head, :options, '/' do
     content_type :text
     request_formatter = RequestFormatter.new(request)
-    request_formatter.print_http_headers
-    request_formatter.print_body
+    request_formatter.print_request
   end
 
 end

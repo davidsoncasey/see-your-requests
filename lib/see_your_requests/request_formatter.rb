@@ -19,8 +19,6 @@ class RequestFormatter
   def print_body
     if @request.body.size > 0
       ap @request.body.read
-    else
-      ""
     end
   end
 

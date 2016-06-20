@@ -1,5 +1,3 @@
-require 'awesome_print'
-
 class RequestFormatter
   def initialize(request)
     @request = request
